@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks: 
+    - name: Restart 7dtd every night
+      cron: 
+        name: "Restart 7dtd"
+        minute: "0"
+        hour: "11"
+        job: "systemctl restart 7dtd"
+ 
+
+
